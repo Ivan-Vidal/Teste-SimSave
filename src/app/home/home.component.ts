@@ -18,7 +18,7 @@ erro: any;
   constructor( private homes:HomeService) {
     this.getFun()
    }
-  products: any = [];
+  products: any[] = [];
   inscricao: Subscription;
   ngOnInit() {
       
@@ -26,8 +26,9 @@ erro: any;
   }
 
   private getFun(){
-    //this.incricao = this.homes.getDatas().subscribe(obj =>  console.log(obj));
-    this.homes.getDatas().subscribe((obj :any) => { this.products = obj
+    this.homes.getDatas().subscribe((obj :any) => {
+      if(!obj) return console.log('error');
+       this.products = obj.products;
       console.log(this.products) 
     },
      (error:any) => {

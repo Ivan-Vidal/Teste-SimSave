@@ -1,66 +1,100 @@
 <!-- Toolbar -->
-<app-navbar></app-navbar>
+<div>
+    <p class="tool">
+    <mat-toolbar class="toolbar">
+        <div class="logtipo web">
+            <img src="../../assets/img/LogoSimSave-completo.svg" alt="">
+        </div>
+          <div class="logtipo mobile">
+            <img src="https://www.simsave.com.br/assets/images/IconeSimSave.svg" alt="">
+        </div>
+        <span class="example-spacer"></span>
+        <div class="buttons">
+            <button mat-stroked-button class="entrar" routerLink="/login">Entrar</button>
+            <button mat-raised-button color="primary" type="button"
+            class="cadastro"  type="button" routerLink="/login">Cadastre-se</button>
+        </div>
+    </mat-toolbar>
+</p>
+</div>
+
 <div class="container-fluid">
-<mat-grid-list cols="" rowHeight="fit">
-    <img src="../../assets/img/banner.png" class="banner-img" alt="Banner SimSave">
-    <div mat-grid-list class="grid">
-        <ul *ngFor="let item of products">
-            <li class="details">
-
-                <hr class="topo">
-                <h1>{{item.title}}</h1>
-
-                <p>
-                    {{item.text}}
-                </p>
-                <button class="saiba" mat-stroked-button color="warn">Saiba mais</button>
-            </li>
-        </ul>
-    </div>
-    <div class="global">
-    <div class="section">
-<div class="teste"></div>
     
-        <div class="informa-container">
-            <h1>Ainda não é assinante?</h1>
-            <p>Cadastre-se gratuitamente e descubra como vários de profissionais da área da saúde estão aprimorando seus
-                estudos através do método inovador SimSave.</p>
-            <button class="btn-1" type="button" mat-raised-button routerLink="/login">Cadastre-se</button>
+        <img src="../../assets/img/banner.png" class="banner-img" alt="Banner SimSave">
+       
+        <div mat-grid-list class="grid">
+           
+            <ul class="list">
+                <div class="row">
+                <li  *ngFor="let item of products" class="details ">
+                   
+                       <div class="col">
+                    <hr class="topo" [ngStyle]="
+                    {
+                     'background-color': item.color              
+                    }"> 
+                                   
+                    <h1 [ngStyle]="
+                    {
+                     'color': item.color              
+                    }">{{item.title}}</h1>
+                    
+                    <p>
+                        {{item.text}}
+                    </p>
+                    <button class="saiba" mat-stroked-button [ngStyle]="{'color': item.color}">Saiba mais</button>
+                </div>
+            
+                </li>
+            </div>
+            </ul>
+        </div>
+        <div class="global">
+            <div class="section">
+                <div class="teste"></div>
+                
+                <div class="informa-container">
+                    <h1>Ainda não é assinante?</h1>
+                    <p>Cadastre-se gratuitamente e descubra como vários de profissionais da área da saúde estão aprimorando seus
+                        estudos através do método inovador SimSave.</p>
+                        <button class="btn-1" type="button" mat-raised-button routerLink="/login">Cadastre-se</button>
+                        
+                    </div>
+                </div>
+                <div class="footer p-3">
+                    <div>
+                        <img class="mt-3 mb-3 logo" src="../../assets/img/LogoSimSave-completo.svg" alt="">
+                    </div>
+                    <div>
+                        <ul class="list-icon">
+                            <li class="icons">
+                                <img src="../../assets/img/big-twitter-logo.svg" alt="">
+                            </li>
+                            <li class="icons">
+                                <img src="../../assets/img/facebook.svg" alt="">
+                            </li>
+                            <li class="icons">
+                                <img src="../../assets/img/instagram.svg" alt="">
+                            </li>
+                            <li class="icons">
+                                <img class="youtube" src="../../assets/img/youtube.svg" alt="">
+                            </li>
+                            <li class="icons">
+                                <img src="../../assets/img/logotipo-do-linkedin.svg" alt="">
+                            </li>
+                        </ul><br>
+                    </div>
+                    
+                    <div class="email">
+                        <div class="email-fale">
+                            <img class="img-email" src="../../assets/img/o-email.svg" alt="">
+                            <h1>Fale conosco</h1>
+                        </div>
+                        
+                        <div class="fundo">
+                            <p> Dúvida, crítica sugestão ou elogio? Envie um e-mail para suporte@simsave.com.br </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
-   </div>
-</div>
-
-    <div class="footer p-3">
-        <div>
-        <img class="mt-3 mb-3 logo" src="../../assets/img/LogoSimSave-completo.svg" alt="">
-    </div>
-        <div>
-            <ul class="list-icon">
-                <li class="icons">
-                    <img src="../../assets/img/big-twitter-logo.svg" alt="">
-                </li>
-                <li class="icons">
-                    <img src="../../assets/img/facebook.svg" alt="">
-                </li>
-                <li class="icons">
-                    <img src="../../assets/img/instagram.svg" alt="">
-                </li>
-                <li class="icons">
-                    <img class="youtube" src="../../assets/img/youtube.svg" alt="">
-                </li>
-                <li class="icons">
-                    <img src="../../assets/img/logotipo-do-linkedin.svg" alt="">
-                </li>
-            </ul><br>
-        </div>
-    <div class="fale">
-        <div class="email">
-            <img class="img-email" src="../../assets/img/o-email.svg" alt="">
-            <h1>Fale conosco</h1>
-        </div>
-        <br>
-        <p class="fundo">Dúvida, crítica sugestão ou elogio? Envie um e-mail para suporte@simsave.com.br</p>
-    </div>
-</div>
-</div>
-</mat-grid-list>

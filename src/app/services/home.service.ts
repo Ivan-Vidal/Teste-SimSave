@@ -25,7 +25,7 @@ export class HomeService {
 
    public getDatas(): Observable<Products[]> {
       return this.http
-      .get<Products[]>('https://teste-simsave.getsandbox.com/home',httpOptions)
+      .get<Products[]>('https://simsave-teste.getsandbox.com/home',httpOptions)
       .pipe(retry(1), catchError(this.utils.handleError));
     }
      
